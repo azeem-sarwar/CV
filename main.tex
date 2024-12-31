@@ -1,216 +1,161 @@
-
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
-
-\documentclass[9pt]{developercv} 
-\usepackage{multicol}
-\setlength{\columnsep}{0mm}
-%----------------------------------------------------------------------------------------
-\usepackage{lipsum}  
-
-
+\documentclass[paper=a4,fontsize=11pt]{temp} % KOMA-article class
 \begin{document}
 
-%----------------------------------------------------------------------------------------
-%	TITLE AND CONTACT INFORMATION
-%----------------------------------------------------------------------------------------
+\newcommand\textbox[1]{%
+  \parbox{.333\textwidth}{#1}%
+}
 
-\begin{minipage}[t]{0.5\textwidth}
-    \vspace{-\baselineskip} % Required for vertically aligning minipages
+\hyphenation{ka-te-go-ri-ze}
+\hyphenation{prog-ram-la-ya-bil-mek-tir}
+\hyphenation{edi-le-rek}
 
-    { \fontsize{16}{20} \textcolor{black}{\textbf{\MakeUppercase{Azeem Sarwar}}}} % First name
-
-    \vspace{6pt}
-
-    {\Large Software $\sim$ Engineer} % Career or current job title
+\begin{minipage}{.2\linewidth}
+   \includegraphics[width=1\textwidth]{photo}
 \end{minipage}
-\hfill
-\begin{minipage}[t]{0.2\textwidth} % 20% of the page width for the first row of icons
-    \vspace{-\baselineskip} % Required for vertically aligning mini pages
+\begin{minipage}{0.7\linewidth}
+   \MyName{Fatih Çomak}
+   \sepspace
 
-    % The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
-    \icon{Globe}{11}{\href{https://www.azeemsarwar.de}{portfolio.com}}\\
-    \icon{Phone}{11}{\href{tel://004915224214567}{015224214567}}\\
-    \icon{MapMarker}{11}Nordhausen,Germany\\
-
-\end{minipage}
-\begin{minipage}[t]{0.27\textwidth} % 27% of the page width for the second row of icons
-    \vspace{-\baselineskip} % Required for vertically aligning mini pages
-
-    \icon{Envelope}{11}{\href{mailto:azeemsarwarr1@gmail.com}{azeemsarwarr1@gmail.com}}\\
-    \icon{Github}{11}{\href{https://github.com/uma-dev}{github.com/azeem-sarwar}}\\
-    \icon{LinkedinSquare}{11}{\href{https://www.linkedin.com/in/azeem-sarwarr}{/in/azeem-sarwarr}}\\
+\noindent\textbox{ \hfill}\textbox{\hfil \textbf{\includegraphics[scale=0.75]{IMG/logo/mail}}\hfil}\textbox{ azeemsarwarr1@gmail.com}
+\vspace{1mm}
+\noindent\textbox{ \hfill}\textbox{\hfil \textbf{\includegraphics[scale=0.75]{IMG/logo/phone}}\hfil}\textbox{ +4915224214567}
+\vspace{1mm}
+\noindent\textbox{ \hfill}\textbox{\hfil \textbf{\includegraphics[scale=0.75]{IMG/logo/location}}\hfil}\textbox{ Nordhausen, Thuringia - Germany }
+\vspace{1mm}
+\noindent\textbox{ \hfill}\textbox{\hfil \textbf{\includegraphics[scale=0.75]{IMG/logo/linkedin}}\hfil}\textbox{ linkedin.com/in/azeemsarwarr}
+\vspace{1mm}
+\noindent\textbox{ \hfill}\textbox{\hfil \textbf{\includegraphics[scale=0.0125]{IMG/logo/github}}\hfil}\textbox{ github.com/azeem\-sarwar}
 
 \end{minipage}
 
+\NewPart{Bilgiler}{}
+\noindent
 
-%----------------------------------------------------------------------------------------
-%	INTRODUCTION, SKILLS AND TECHNOLOGIES
-%----------------------------------------------------------------------------------------
+\textbox{\textbf{Askerlik Durumu} \hfill}\textbox{\hfil Tecilli - 2022 \hfil}\textbox{\hfill}
 
-\begin{minipage}[t]{0.5\textwidth}
-    \cvsect{Summary}
-    \vspace{-1pt}
-    Motivated and detail-oriented Master’s student in Internet of Things (IoT) with a strong foundation in Data Science, Python programming, and Cloud-Native development. Eager to contribute to Infineon's innovative IT solutions and gain hands-on experience in software development and data analysis.
+\textbox{\textbf{Doğum Tarihi} \hfill}\textbox{\hfil 25.09.1993 \hfil}\textbox{\hfill}
+
+\textbox{\textbf{Doğum Yeri} \hfill}\textbox{\hfil Antalya \flag{IMG/flag/tr} \hfil}\textbox{\hfill}
+
+\NewPart{Eğitim}{}
+\indent
+\newline
+\indent
+\EducationEntry{Yıldız Teknik \"{U}niversitesi Bilgisayar Mühendisliği, Lisans}{Haziran 2020}{Diploma Notu: 2,40/4}{\%30 İngilizce eğitim.} {IMG/ytu_tr}
+\newline\newline
+\sepspace
+
+\EducationEntry{Isparta Süleyman Demirel Fen Lisesi}{Haziran 2012}{Diploma Notu: 89,3/100}{} {IMG/isdfl}
+\sepspace
+
+
+\NewPart{Yabancı Dil}{}
+\indent
+\textbox{\textbf{İngilizce \flag{IMG/flag/gb}} \hfill}\textbox{\hfil Profesyonel Çalışma Yetkinliği \hfil}\textbox{\hfill}
+\sepspace
+
+
+\NewPart{Beceri \& Yetenekler}{}
+\hspace{3mm}
+\begin{minipage}[t]{0.33\textwidth} 
+
+\begin{tabular}[t]{ l l }
+\textbf{Programlama Dilleri}
+\end{tabular}
+
+\sepspace
+
 \end{minipage}
-\hfill % Whitespace between
-\begin{minipage}[t]{0.465\textwidth}
-    \cvsect{Skills}
-    \vspace{0.5pt}
+%
+\begin{minipage}[t]{0.66\textwidth} 
 
-    \begin{minipage}[t]{1\textwidth}
-        \textbf{Languages:}
-    \end{minipage}
-    \hfill
-    \begin{minipage}[t]{1\textwidth}
-        JavaScript, Typescripts, Python, C++\end{minipage}
 
-    \begin{minipage}[t]{1\textwidth}
-        \textbf{Frontend:}
-    \end{minipage}
-    \hfill
-    \begin{minipage}[t]{1\textwidth}
-        React Native, React.js, Vue.js,Tailwind CSS, Bootstrap CSS, shopify. \end{minipage}
-    \begin{minipage}[t]{1\textwidth}
-        \textbf{Backend:}
-    \end{minipage}
-    \hfill
-    \begin{minipage}[t]{1\textwidth}
-        Node.js, Swagger, Vue.js, RESTful APIs, Express.js, Next.js, nest.js
-    \end{minipage}
 
-    \begin{minipage}[t]{1\textwidth}
-        \textbf{Databases:}
-    \end{minipage}
-    \hfill
-    \begin{minipage}[t]{1\textwidth}
-        Oracle, MySQL, MongoDB, SQL, Firebase
-    \end{minipage}
-    \begin{minipage}[t]{1\textwidth}
-        \textbf{Cloud \& CI/CD:}
-    \end{minipage}
-    \hfill
-    \begin{minipage}[t]{1\textwidth}
-        AWS, Docker, CI/CD Pipelines, Automated Testing
-    \end{minipage}
+\begin{tabular}{lllllllllll}
+\includegraphics[scale=0.035]{IMG/languages/assembly} & \textbf{Assembly} & : & Az  &  &  & \includegraphics[scale=0.03]{IMG/languages/htmlCss} & \textbf{HTML, CSS}  & : &  & Orta   \\
+\includegraphics[scale=0.02]{IMG/languages/pascal} & \textbf{Pascal}   & : & Az  &  &  & \includegraphics[scale=0.075]{IMG/languages/javascript} & \textbf{JavaScript} & : &  & Az  \\
+\includegraphics[scale=0.05]{IMG/languages/c} & \textbf{C}        & : & \textbf{İyi} &  &  & \includegraphics[scale=0.015]{IMG/languages/aspnet} & \textbf{ASP.NET}    & : &  & Az  \\
+\includegraphics[scale=0.05]{IMG/languages/cplusplus} & \textbf{C++}      & : & Az  &  &  & \includegraphics[scale=0.03]{IMG/languages/prolog} & \textbf{Prolog}     & : &  & Az  \\
+\includegraphics[scale=0.05]{IMG/languages/csharp} & \textbf{C\#}      & : & \textbf{Orta}  &  &  & \includegraphics[scale=0.06]{IMG/languages/sql} & \textbf{SQL}        & : &  & \textbf{Orta}   \\
+\includegraphics[scale=0.05]{IMG/languages/java} & \textbf{Java}     & : & \textbf{Orta}   &  &  & \includegraphics[scale=0.04]{IMG/languages/groovy} & \textbf{Groovy}     & : &  & Az \\
+\includegraphics[scale=0.05]{IMG/languages/python} & \textbf{Python}   & : & Az  &  &  & \includegraphics[scale=0.015]{IMG/languages/matlab} & \textbf{Matlab}     & : &  & Az
+\end{tabular}
+
+\end{minipage} \\\\\\
+
+
+\begin{minipage}[t]{0.33\textwidth} 
+
+\begin{tabular}[t]{ l l }
+\textbf{Yetenekler}
+\end{tabular}
+
+\sepspace
+
+\end{minipage}
+%
+\begin{minipage}[t]{0.66\textwidth} 
+
+
+
+\begin{tabular}{llllll}
+\textbf{Web Teknolojileri}   & : & \includegraphics[scale=0.04]{IMG/tech/angular} Angular, \includegraphics[scale=0.04]{IMG/tech/spring}Spring, \includegraphics[scale=0.04]{IMG/tech/hibernate} Hibernate                 &  &  &  \\
+\textbf{Yapay Zeka}          & : & Makine Öğrenmesi, Uzman Sistemler          &  &  &  \\
+\textbf{Programlama}         & : & C (Yapısal), OOP (Nesne Yönelimli)         &  &  &  \\
+\textbf{Veritabanı Yönetimi} & : & \includegraphics[scale=0.02]{IMG/tech/postgresql} PostgreSQL                                 &  &  &  \\
+\textbf{İşletim Sistemleri}  & : & \includegraphics[scale=0.03]{IMG/tech/linux} Linux                                      &  &  &  \\
+\textbf{Veri Analizi}        & : & Veri Madenciliği, Big Data, Biyoenformatik &  &  & 
+\end{tabular}
+
 \end{minipage}
 
 
-%----------------------------------------------------------------------------------------
-%	Projects
-%----------------------------------------------------------------------------------------
-\cvsect{Projects}
-\begin{entrylist}
-    \entry
-    {MERN STACK}
-    {Postspace}
-    {\href{https://postspace.jp/}{postspace.jp}}
-    {It is a file-sharing service designed to securely transfer files using email. By adopting end-to-end encryption (E2EE), we prevent data leaks from cyber attacks and accidental forwarding. You can use it as an alternative to email attachments to securely exchange confidential documents and personal information. It integrates Stripe for payments and AWS EC2 for cloud hosting.}
-    \entry
-    {MERN STACK}
-    {Moresty}
-    {}
-    {A comprehensive salon management system with a mobile app for booking appointments, managing services, and integrating payments through Stripe. It allows salon owners to manage bookings and payments efficiently.}
-    \entry
-    {MERN STACK}
-    {Safar}
-    {}
-    {A hostel and hotel booking app with a property listing interface, availability checking, and admin dashboard for managing bookings. It features real-time updates and payment processing.}
-    \entry
-    {MERN STACK}
-    {File-Sharing Mobile App}
-    {}
-    {A secure mobile app for video sharing, offering file storage, user authentication with Firebase, and payments for content creators. The app ensures ease of file uploads and secure sharing.}
-\end{entrylist}
 
-%----------------------------------------------------------------------------------------
-%	EDUCATION
-%----------------------------------------------------------------------------------------
-\vspace{-10 pt}
-\cvsect{Education}
-\begin{entrylist}
-    \entry
-    {10/2024 - curr.}
-    {Master Computer Engineering (IoT) }
-    {Nordhausen University of applied sciences.}
-    {Pursuing a Master's in Internet of Things (IoT), focusing on the development of smart devices, sensor networks, cloud-based systems, and data analytics for innovative IoT applications.}
-    \entry
-    {10/2018 - 06/2024}
-    {Bachelors in Software engineering}
-    {Pir Mehar Ali Shah Arid Agriculture Rawalpindi}
-    {Graduated with a Bachelor's degree in Software Engineering from Arid Agriculture University, Rawalpindi, with a CGPA of 1.1 / 5.0, specializing in Software engineering.}
+\NewPart{Deneyimler}{}
+\indent
+\newline
+\indent
+\workEntry{Xinerji Teknoloji Hizmetleri}{Eylül 2018 - Nisan 2019}{Part-time Developer}{Çok iplikli lojistik ERP TMAXX isimli kurumsal web uygulamasının geliştirilmesinde rol üstlendim. TMAXX, back-end için Java - Spring Boot, front-end için Angular ve server için PostgreSQL kullanılarak geliştirilmiş projedir.
+Ayrıca Git kullanımı, Microservices, Docker tecrübesi edindim.} {IMG/xinerji}
+\newline\newline
+\sepspace
 
-\end{entrylist}
+\workEntry{etcBASE Yazılım ve Bilişim Teknolojileri}{2017 Yaz Dönemi}{Staj}{Başlıca Angular olarak JavaScript frameworkleri ve Spring teknolojileri üzerine araştırmalar yapıldı, dökümantasyonlar tarandı ve karşılaştırmalar yapıldı. TypeScript SPA mimarisi analiz edildi. Bu doğrultuda sunum hazırlandı.}{IMG/etcbase}
+\newline\newline
+\sepspace
 
-%----------------------------------------------------------------------------------------
-%	EXPERIENCE
-%----------------------------------------------------------------------------------------
-\vspace{-10 pt}
-\cvsect{Experience}
-\begin{entrylist}
-    \entry
-    {03/22-09/24}
-    {Full-Stack developer}
-    {Mid-Chain technologies}
-    {\vspace{-10pt}
-        \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt, leftmargin=-1pt]
-            \item {Designed and implemented cloud-native web applications with CI/CD pipelines, improving deployment efficiency by 30\%.}
-            \item {Developed and documented scalable APIs using Swagger and Node.js, ensuring seamless backend functionality.}
-            \item {Processed large datasets and optimized queries for MySQL and MongoDB, increasing data retrieval speed by 20\%.}
-            % \item {Developed and deployed cloud-native applications on AWS services using Lambda, API Gateway, S3, and Cognito for scalability and performance.}
-            % \item {Deployed mobile applications using React Native, including features such as push notifications, real-time chat, and payment gateways such as Stripe.}
-            % \item {Improved code quality through extensive unit and integration testing using tools such as Jest and Postman.}
-
-            % \item {Reduced application load times by 30\% through code optimization and refactoring of backend services.}
-
-        \end{itemize}
-    }
-    \entry
-    {6/22-10/22}
-    {Mobile Application Intern}
-    {AF-Suqure}
-    {\vspace{-10pt}
-        \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt, leftmargin=-1pt]
-            \item {Built cross-platform applications in React Native and integrated real-time data APIs.}
-
-            \item {Conducted unit testing and debugging, reducing app crash rates by 15%.
-            }
-
-            % \item {Implemented push notifications and real-time chat features for seamless user interaction.}
-
-            % \item {Participated in the entire app development cycle, from conception to deployment, and contributed to the team’s goals.}
-
-            % \item {Performed unit testing and debugging to ensure the quality of the applications and reduce crash rate by 15\%.}
-
-            % \item {Delivered apps that improved customer satisfaction and retention and received positive feedback for usability.}
-
-        \end{itemize}
-    }
-
-\end{entrylist}
-
-%----------------------------------------------------------------------------------------
-%	LANGUAGES
-%----------------------------------------------------------------------------------------
-\vspace{-10 pt}
-\cvsect{Languages}
-\vspace{-6pt}
-
-\hspace{26mm} \textbf{English} - Professional, \textbf{ German} - basic, \textbf{ Urdu} - Mother tounge
-
-%----------------------------------------------------------------------------------------
+\workEntry{Garanti Teknoloji}{2015 Yaz Dönemi}{Staj}{HTML, CSS, (gerektiğinde) JavaScript, SQL, ASP.NET, C\# becerileri edinildi; ayrıca ASP.NET Page Life Cycle analiz edildi, client-server Data akışı araştırıldı. Edinilen web mimarisi bilgisi ışığında konsol ve form uygulamaları ile staj projesi olarak da bir demo web uygulaması geliştirildi.}{IMG/garanti}
+\sepspace
 
 
-%----------------------------------------------------------------------------------------
-%	LANGUAGES
-%----------------------------------------------------------------------------------------
-\vspace{-10 pt}
-\cvsect{Hobbies}
-\vspace{-6pt}
+\NewPart{Projeler}{}
+\indent
+\newline
+\indent
+\workEntry{Müşteri Memnuniyeti Anketi}{Temmuz 2020}{Hobi Proje}{\textbf{URL:} \emph{github.com/Sillyon/customer-satisfaction-survey} \newline
+Bir anket konusu üzerinden müşteri memnuniyetini ölçen anket sunan ve GitHub üzerinde geliştirilen bir \textbf{RESTful Web API} projesidir. Puanlandırmalar baz alınarak her anket konusunun NPS skoru hesaplanır.
+\newline
+Back-end, Java dilinde Maven build ve Spring Boot ile yazıldı. JPA, Hibernate, Lombok, Swagger kullanıldı. Server için in-memory H2 Database seçildi. JUnit test yazıldı. Postman ve Swagger-ui'dan faydalanıldı.
+Front-end ise React JS ile yazıldı.}{IMG/project/nps}
 
-\hspace{26mm} \textbf{Multiplayer games} , \textbf{ Cirket} , \textbf{ Fitness, Traveling}
+\sepspace
 
-%----------------------------------------------------------------------------------------
+\workEntry{SDLC Dönüşümünde DevOps Yaklaşım }{Ağustos 2019 - Ocak 2020}{Bitirme Tezi}{\textbf{Ekip Arkadaşı:} Selahattin Gürgen\textbf{; Danışman:} Prof.Dr. Oya Kalıpsız \newline
+DevOps yaklaşımı ile uçtan uca Yazılım Geliştirme Yaşam Döngüsü otomasyonu dockerize edilerek semantik versiyon yönetimi sağlandı. Sürüm notunu çıkaran \textbf{Commit Difference Finder} Plugin ve bir script geliştirildi. Git, Jira, Bitbucket, Jenkins, Groovy, Java, Linux Bash, Atlassian SDK kullanıldı. Jira'da task açılmasından ürünün canlıya alınmasına kadar olan süre saniyeler seviyesine indirildi. Esneklik sağlandı.}{IMG/project/devops}
+
+\sepspace
+
+\workEntry{Android Malware Detection}{Ocak 2019 - Haziran 2019}{Akademik Proje}{\textbf{Ekip Arkadaşı:} Alibek Erkabayev\textbf{; Danışman:} Arş.Gör. Alper Eğitmen
+\newline
+\textbf{URL:} \emph{github.com/bigalex95/androidMalwareDetectionSystem} \newline
+Makine öğrenmesini Supervised kullanan, statik opcode analizine dayalı bir yaklaşım sunularak Word Embedding ve Word2Vec yöntemi kullanıldı. Apk DataSet, doğal dil olarak modellendi ve işleme, kelime vektörleri üzerinden gerçeklendi. Ön-işleme ve hashleme için C++, Python kullanıldı. Weka algoritmaları kullanılarak Benign, Malware sınıflandırması yapıldı ve Malware'ların aileleri kategorilendirildi. Sonuç olarak CBOW için 91,32\%, GloVe için 92,12\% başarı elde edildi.
+}{IMG/project/malware}
+\sepspace
+
+\workEntry{Kütüphane Otomasyon Sistemi}{Eylül 2015}{Staj Projesi}{\textbf{Danışman:} Arda Çetinkaya
+\newline
+\textbf{URL:} \emph{github.com/Sillyon/WebApplication-Kutuphane-Demo} \newline
+Visual Studio ortamında ASP.NET ve C\# tabanlı Web uygulaması Geliştirildi. Bootstrap, jQuery, HTML, CSS, JavaScript, SQL Server Express kullanıldı.}{IMG/project/library}
+\sepspace
 
 \end{document}
