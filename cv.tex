@@ -1,0 +1,340 @@
+%%%%
+% MTecknology's Resume
+%%%%
+% Author: Michael Lustfield
+% License: CC-BY-4
+% - https://creativecommons.org/licenses/by/4.0/legalcode.txt
+%%%%
+
+\documentclass[letterpaper,10pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%
+%% BEGIN_FILE: mteck.sty
+%% NOTE: Everything between here and END_FILE can
+%% be relocated to "mteck.sty" and then included with:
+%\usepackage{mteck}
+
+% Dependencies
+% NOTE: Some packages (lastpage, hyperref) require second build!
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{bookmark}
+\usepackage{lastpage}
+
+% Sans-Serif
+%\usepackage[sfdefault]{FiraSans}
+%\usepackage[sfdefault]{roboto}
+%\usepackage[sfdefault]{noto-sans}
+%\usepackage[default]{sourcesanspro}
+
+% Serif
+\usepackage{CormorantGaramond}
+\usepackage{charter}
+
+% Colors
+% Use with \color{Name}
+% Can wrap entire heading with {\color{accent} [...] }
+\usepackage{xcolor}
+\definecolor{accentTitle}{HTML}{0e6e55}
+\definecolor{accentText}{HTML}{0e6e55}
+\definecolor{accentLine}{HTML}{a16f0b}
+
+% Misc. Options
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\urlstyle{same}
+
+% Adjust Margins
+\addtolength{\oddsidemargin}{-0.7in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-0.7in}
+\addtolength{\textheight}{1.4in}
+
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\setlength{\tabcolsep}{0pt}
+\setlength{\footskip}{3.7pt}
+\raggedbottom
+\raggedright
+
+% ATS Readability
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+%-----------------%
+% Custom Commands %
+%-----------------%
+
+% Centered title along with subtitle between HR
+% Usage: \documentTitle{Name}{Details}
+\newcommand{\documentTitle}[2]{
+  \begin{center}
+    {\Huge\color{accentTitle} #1}
+    \vspace{10pt}
+    {\color{accentLine} \hrule}
+    \vspace{2pt}
+    %{\footnotesize\color{accentTitle} #2}
+    \footnotesize{#2}
+    \vspace{2pt}
+    {\color{accentLine} \hrule}
+  \end{center}
+}
+
+% Create a footer with correct padding
+% Usage: \documentFooter{\thepage of X}
+\newcommand{\documentFooter}[1]{
+  \setlength{\footskip}{10.25pt}
+  \fancyfoot[C]{\footnotesize #1}
+}
+
+% Simple wrapper to set up page numbering
+% Usage: \numberedPages
+% WARNING: Must run pdflatex twice!
+\newcommand{\numberedPages}{
+  \documentFooter{\thepage/\pageref{LastPage}}
+}
+
+% Section heading with horizontal rule
+% Usage: \section{Title}
+\titleformat{\section}{
+  \vspace{-5pt}
+  \color{accentText}
+  \raggedright\large\bfseries
+}{}{0em}{}[\color{accentLine}\titlerule]
+
+% Section heading with separator and content on same line
+% Usage: \tinysection{Title}
+\newcommand{\tinysection}[1]{
+  \phantomsection
+  \addcontentsline{toc}{section}{#1}
+  {\large{\bfseries\color{accentText}#1} {\color{accentLine} |}}
+}
+
+% Indented line with arguments left/right aligned in document
+% Usage: \heading{Left}{Right}
+\newcommand{\heading}[2]{
+  \hspace{10pt}#1\hfill#2\\
+}
+
+% Adds \textbf to \heading
+\newcommand{\headingBf}[2]{
+  \heading{\textbf{#1}}{\textbf{#2}}
+}
+
+% Adds \textit to \heading
+\newcommand{\headingIt}[2]{
+  \heading{\textit{#1}}{\textit{#2}}
+}
+
+% Template for itemized lists
+% Usage: \begin{resume_list} [items] \end{resume_list}
+\newenvironment{resume_list}{
+  \vspace{-7pt}
+  \begin{itemize}[itemsep=-2px, parsep=1pt, leftmargin=30pt]
+}{
+  \end{itemize}
+  %\vspace{-2pt}
+}
+
+% Formats an item to use as an itemized title
+% Usage: \itemTitle{Title}
+\newcommand{\itemTitle}[1]{
+  \item[] \underline{#1}\vspace{4pt}
+}
+
+% Bullets used in itemized lists
+\renewcommand\labelitemi{--}
+
+%% END_FILE: mteck.sty
+%%%%%%%%%%%%%%%%%%%%%%
+
+
+%===================%
+% John Doe's Resume %
+%===================%
+
+%\numberedPages % NOTE: lastpage requires a second build
+%\documentFooter{\thepage of 2} % Does similar without using lastpage
+\begin{document}
+
+%---------%
+% Heading %
+%---------%
+
+\documentTitle{Muhammad Mujtaba Arif\\{\large
+Deutsche Bank Internship (f/m/x) in Technology, Data \& Innovation
+}}
+{
+% Web Version
+%\raisebox{-0.05\height} \faPhone\ [redacted - web copy] ~
+%\raisebox{-0.15\height} \faEnvelope\ [redacted - web copy] ~
+%%
+\href{tel:1234567890}{
+    \raisebox{-0.05\height} \faPhone\ (+49)-176-86668759} ~ | ~
+\href{}{
+    \raisebox{-0.15\height} \faEnvelope\ mujtabaarif1997@gmail.com} ~ | ~
+\href{https://www.linkedin.com/in/muhammad-mujtaba-arif-0b2789192/}{
+    \raisebox{-0.15\height} \faLinkedin\ linkedIn} ~ | ~
+\href{https://github.com/Mujtaba-arif/Web-Development-Projects}{
+    \raisebox{-0.15\height} \faGithub\ Github}~ | ~
+\raisebox{-0.15\height} \ Berlin
+
+}
+
+%---------%
+% Summary %
+%---------%
+\vspace{10pt}
+
+
+%--------%
+% Skills %
+%--------%
+
+\section{Skills}
+
+\begin{multicols}{2}
+    \begin{itemize}[itemsep=-2px, parsep=1pt, leftmargin=75pt]
+        % \item[\textbf{This one}] This this this
+        \item[\textbf{Languages}] Python, C/C++, JavaScript, HTML,
+              %\item[\textbf{Libraries}] Python (pandas, Pytorch, SK-learn, TensorFlow), Large Language Models (LLM)
+        \item[\textbf{Cloud}] MS Azure
+        \item[\textbf{Visualization}] PowerBI, Tableau
+              %\item[\textbf{Chodampatti}] Doggystyle
+
+              %\item[\textbf{Containers}] Docker
+        \item[\textbf{Management}] Jira
+              %\item[\textbf{Simulation}] MATLAB, ETAP
+              %\item[\textbf{Frameworks}] React.js, Vue.js, Node.js
+        \item[\textbf{Development}] Agile Methodologies
+        \item[\textbf{MS Office}] Teams, PowerPoint,  Excel, Word
+              %\item[\textbf{Version Control}] Git
+        \item[\textbf{Other}] Project Management
+
+              %\item[\textbf{Other}] Soldering 
+              %\item[\textbf{Testing}] Pytest, Docker, CircleCI, Jenkins, Inspec
+    \end{itemize}
+\end{multicols}
+
+
+
+%-----------%
+% Education %
+%-----------%
+
+\section{Education}
+
+\headingBf{Hochschule Nordhausen - University of Applied Sciences}{Oct 2022 -- Present}
+
+
+
+
+\headingBf{NED University of Engineering and Technology}{Dec 2015 - Aug 2019} % Note: Adding year(s) exposes an implied age
+\headingIt{Bachelor of Engineering in Electronics}{}
+
+
+
+
+%----------------------------%
+% Extracurricular Activities %
+%----------------------------%
+
+\section{Projects}
+
+\headingBf{Smart Notice Board}{Python/SQL}
+\begin{resume_list}
+    \item Developed a Raspberry Pi-based smart notice board that is voice-interactive and equipped \\with buttons to display daily notices, student attendance, and mark sheets, enabling a \\30 percent faster results display.
+    \item Made the software design interface using Tkinter and managed the 350  students database with SQL,\\ incorporating a biometric thumb impression system for attendance tracking.
+    \item Enabled real-time updates and user-friendly access to information for improved \\ attendance keeping by 15 percent.
+\end{resume_list}
+
+
+\headingBf{Web Applications:}{}
+
+\headingBf{Simon Game}{JavaScript/HTML/CSS}
+\begin{resume_list}
+    \item Built and maintained longer patterns with each round to test the player's\\ recall and reproduction abilities.
+    \item Implemented user interfaces and backend logic to improve the overall gameplay\\ experience and ensure seamless interaction for users.
+    \item The game is devised to strengthen memory and attention skills, with players experiencing \\a 30 percent improvement in recall accuracy through repeated play.
+\end{resume_list}
+
+
+
+%\headingBf{Drum Kit}{JavaScript/HTML/CSS}
+%\begin{resume_list}
+% \item An interactive web application enabling users to trigger different drum sounds by pressing \\designated keys on keyboard or clicking on-screen elements.
+%\item Constructed a robust backend architecture and user interface implemented to boost \\user interaction and engagement across the application.
+%\item Ensured alignment of project requirements to achieve consistent application performance \\and reliability throughout all stages of development.
+%\end{resume_list}
+\headingBf{Machine Learning:}{}
+
+\headingBf{Housing Price Prediction Model}{Python}
+\begin{resume_list}
+    \item Build a predictive model using machine learning to forecast housing prices, considering key factors \\such as location, BHK count, property size, and amenities, to achieve an accuracy improvement of \\10-15 percent over traditional methods.
+
+    \item leverage a dataset containing over 10,000 housing records, encompassing diverse geographical \\areas, and preprocess the data by handling missing values and normalizing key features.
+
+    \item Leverage historical real estate data, using algorithms like Linear Regression, Random Forest,\\ and Gradient Boosting to predict prices with precision.
+
+    \item Pandas,Numpy, Scikit-learn and Matplotlib used for respective tasks.
+
+
+
+\end{resume_list}
+
+%------------%
+% Experience %
+%------------%
+
+\section{Experience}
+
+\headingBf{Electrical Engineer}{Nov 2020 - Oct 2022}
+\headingIt{Barqtron Engineering Solutions Pvt. Ltd.}{}
+\begin{resume_list}
+    \item Supervised all aspects of project management including planning, execution and ensuring \\timely delivery of projects while adhering to established deadlines, quality standards and \\Technical Documentations for LV,MV,HV,EHV power systems.
+    \item Monitored project timelines and plans to overcome delays caused by unforeseen factors,\\resulting in a 15 percent time savings and early completions.
+    \item Achieved a 10 percent cost saving through effective planning while managing project delays,\\ milestones and implementing data-driven cost cost control strategies.
+    \item Conducted comprehensive reviews of incoming technical tender documents and providing \\detailed briefings to management, including quantitative analysis where applicable.
+    \item Managing subcontractors and other service providers in completion of project.
+    \item Contract Management, Negotiations and timely procurement of FCC and LCC components.
+    % \item Analyzed and estimated incoming requirements for costing and execution purposes.
+    \vspace{10pt}
+\end{resume_list}
+
+
+\headingBf{Application Engineer}{Nov 2019 -- Nov 2020}
+\headingIt{Sky Electric Pvt. Ltd.}{}
+\begin{resume_list}
+    \item Delivered technical presentations to clearly articulate product and service offerings to prospective \\clients and customers, proposing tailored solutions that improve client engagement by 25 percent, \\and designing custom approaches as required to meet specific needs of solar solutions.
+    \item Proposed optimal solutions based on comprehensive analysis of client requirements, leading to a \\20 percent improvement in project efficiency and client satisfaction.
+    \item Coordinated weekly reviews on key metrics related to scope management leading directly to enhanced \\stakeholder communication practices that refines overall satisfaction ratings among clients \\post-project delivery.
+    \item Led comprehensive site surveys to gather critical data, resulting in the creation of over 10\\ detailed 3D models for solution installations that enhanced client presentations and optimized \\decision-making processes.
+    \item Managing the execution of solar energy projects.
+\end{resume_list}
+
+\section{Certifications}
+
+
+\begin{resume_list}
+    \item Complete Web Application Development - Udemy.
+    \item Applied Machine Learning and Data Science - NED UET.
+    \item Machine Learning with Python - Coursera.
+\end{resume_list}
+
+\section{Languages}
+
+
+\begin{resume_list}
+    \item English (Business fluent).
+    \item German.
+\end{resume_list}
+
+\end{document}
