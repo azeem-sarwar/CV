@@ -1,0 +1,25 @@
+\begin{table}[H]
+    \centering
+    \begin{tabular}{p{0.2\textwidth} p{0.5\textwidth} p{0.3\textwidth}}
+        % Profile Picture
+        \begin{center}
+
+
+            % \includegraphics[width=3.6cm, height=3.5cm]{jpg/Peofile.jpg} % Insert the image
+            \begin{tikzpicture}
+                \clip (0,0) circle (2cm) node {\includegraphics[width=3.5cm, height=3.9cm]{jpg/Peofile.jpg}};
+            \end{tikzpicture}
+
+        \end{center}                                                &
+        % Name and Position
+        \begin{center}
+            % center 
+            \nameandposition{Azeem Sarwar}{Frontend Developer}
+        \end{center} &
+        % Contact Information
+        \begin{flushright}
+            \contactinfo{15224214567}{+49 1522 4214567}{azeemsarwarr1@gmail.com}%
+            {https://www.linkedin.com/in/azeemsarwarr}{https://github.com/azeem-sarwar}{https://azeemsarwar.de}
+        \end{flushright}
+    \end{tabular}
+\end{table}
