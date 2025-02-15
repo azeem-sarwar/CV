@@ -1,0 +1,23 @@
+% Profile Picture Style
+\newcommand{\profilepic}[1]{%
+    \includegraphics[width=3cm, height=3cm, keepaspectratio, clip, trim=5mm]{#1}
+}
+
+% Name and Position Style
+\newcommand{\nameandposition}[2]{%
+    \vspace{45pt}
+    \textbf{\Huge #1} \\ 
+    \vspace{3pt}
+    \textbf{(#2)}
+}
+
+% Contact Information Style
+\newcommand{\contactinfo}[6]{%
+    \faMobile \hspace{.5pt} \href{tel:#1}{#2} \\ \vspace{3pt}
+    \faAt \hspace{.5pt} \href{mailto:#3}{#3} \\ \vspace{3pt}
+    \faLinkedinSquare \hspace{.5pt} \href{#4}{LinkedIn} \\ \vspace{3pt}
+    \faGithub \hspace{.5pt} \href{#5}{GitHub} \\ \vspace{3pt}
+    \faGlobe \hspace{.5pt} \href{#6}{Portfolio} \\ \vspace{3pt}
+    \faMapMarker \hspace{.5pt} Bochumer Str. 32, 99734 Nordhausen, Germany
+    % \faMapMarker \hspace{.5pt} Nordhausen, Germany
+}
